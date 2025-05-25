@@ -5,6 +5,7 @@ import com.vms.dto.request.SignUpRequest;
 import com.vms.dto.response.AuthResponse;
 import com.vms.model.User;
 import com.vms.repository.UserRepository;
+import com.vms.security.JwtTokenProvider;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
