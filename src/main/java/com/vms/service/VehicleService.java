@@ -159,7 +159,7 @@ public class VehicleService {
                 .map(this::mapToVehicleResponse);
     }
 
-    public Optional<VehicleResponse> findByPlateNumber(PlateNumber plateNumber) {
+    public Optional<VehicleResponse> findByPlateNumber(String plateNumber) {
         return vehicleRepository.findByCurrentPlateNumber(plateNumber)
                 .map(this::mapToVehicleResponse);
     }
@@ -173,7 +173,7 @@ public class VehicleService {
                 .toList();
     }
 
-    private VehicleResponse mapToVehicleResponse(Vehicle vehicle) {
+    public VehicleResponse mapToVehicleResponse(Vehicle vehicle) {
         return new VehicleResponse(
                 vehicle.getId(),
                 vehicle.getChassisNumber(),
@@ -207,5 +207,10 @@ public class VehicleService {
                 history.getTransferPrice(),
                 history.getTransferDate()
         );
+    }
+
+    public Vehicle getVehicleById(Long vehicleId) {
+        return vehicleRepository.findById(vehicleId)
+                .orElseThrow(() -> new RuntimeException("Vehicle not found with id: " + vehicleId));
     }
 }

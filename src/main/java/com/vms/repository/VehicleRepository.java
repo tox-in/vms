@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
     Optional<Vehicle> findByChassisNumber(String chassisNumber);
-    Optional<Vehicle> findByCurrentPlateNumber(PlateNumber currentPlateNumber);
+    Optional<Vehicle> findByCurrentPlateNumber(String currentPlateNumber);
     List<Vehicle> findByCurrentOwner(Owner owner);
 
     boolean existsByChassisNumber(String chassisNumber);
