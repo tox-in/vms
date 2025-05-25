@@ -11,4 +11,6 @@ public interface PlateNumberRepository extends JpaRepository<PlateNumber, Long> 
     List<PlateNumber> findByOwner(Owner owner);
     Optional<PlateNumber> findByPlateNumber(String plateNumber);
     List<PlateNumber> findByOwnerAndStatus(Owner owner, String status);
+
+    boolean existsByPlateNumber(String plateNumber);
 }

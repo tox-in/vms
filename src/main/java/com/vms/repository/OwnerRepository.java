@@ -9,8 +9,9 @@ import java.util.Optional;
 
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
     Optional<Owner> findByEmail(String email);
+
+    boolean existsByNationalId(String nationalId);
     Optional<Owner> findByNationalId(String nationalId);
     Page<Owner> findAll(Pageable pageable);
-    Page<Owner> findByNationalIdContainingOrEmailContaining(String nationalId, String email, Pageable pageable);
     Page<Owner> findByNationalIdContainingOrPhoneContaining(String nationalId, String phone, Pageable pageable);
 }

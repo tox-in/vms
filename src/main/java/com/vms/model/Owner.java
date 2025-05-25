@@ -40,7 +40,6 @@ public class Owner {
     //Parameterized constructor
 
     public Owner(String names, String nationalId, String phone, String address) {
-        this.names = names;
         this.nationalId = nationalId;
         this.phone = phone;
         this.address = address;
@@ -74,14 +73,6 @@ public class Owner {
 
     public void setNames(String names) {
         this.names = names;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getNationalId() {
@@ -129,7 +120,6 @@ public class Owner {
         return "Owner{" +
                 "id=" + id +
                 ", names='" + names + '\'' +
-                ", email='" + email + '\'' +
                 ", nationalId='" + nationalId + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +

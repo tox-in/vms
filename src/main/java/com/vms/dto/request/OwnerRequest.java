@@ -8,10 +8,6 @@ public record OwnerRequest(
         @NotBlank(message = "Name is required")
         String name,
 
-        @NotBlank(message = "Email is required")
-        @Email(message = "Email should be valid")
-        String email,
-
         @NotBlank(message = "National ID is required")
         String nationalId,
 
