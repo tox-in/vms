@@ -54,7 +54,7 @@ public class VehicleController {
     @GetMapping("/search")
     public ResponseEntity<?> searchVehicle(
             @RequestParam(required = false) String nationalId,
-            @RequestParam(required = false) String plateNumber,
+            @RequestParam(required = false) PlateNumber plateNumber,
             @RequestParam(required = false) String chassisNumber) {
 
         if (chassisNumber != null) {

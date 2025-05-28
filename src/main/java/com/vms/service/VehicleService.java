@@ -159,7 +159,7 @@ public class VehicleService {
                 .map(this::mapToVehicleResponse);
     }
 
-    public Optional<VehicleResponse> findByPlateNumber(String plateNumber) {
+    public Optional<VehicleResponse> findByPlateNumber(PlateNumber plateNumber) {
         return vehicleRepository.findByCurrentPlateNumber(plateNumber)
                 .map(this::mapToVehicleResponse);
     }
